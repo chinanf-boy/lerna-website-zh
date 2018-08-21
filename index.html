@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lerna · A tool for managing JavaScript projects with multiple packages.</title>
+    <title>Lerna · 用于 拥有多个packages 的 js项目 的工具.</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="hero">
       <img src="images/lerna-hero.svg" alt="Lerna logo" width="500px">
-      <p class="hero__lead">A tool for managing JavaScript projects with multiple packages.</p>
+      <p class="hero__lead">用于 拥有多个packages 的 js项目 的工具.</p>
 
       <p class="hero__buttons">
         <iframe src="https://ghbtns.com/github-btn.html?user=lerna&repo=lerna&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
@@ -18,33 +18,29 @@
       </p>
 
       <p class="hero__follow">
-        <a href="https://twitter.com/lernajs" target="_blank">Follow Lerna on Twitter</a>
+        <a href="https://twitter.com/lernajs" target="_blank">关注 Lerna 的 Twitter</a>
       </p>
     </header>
 
     <article class="content">
       <section class="content__section" id="about">
         <h2>
-          <a href="#about">About</a>
+          <a href="#about">关于</a>
         </h2>
 
         <p>
-          Splitting up large codebases into separate independently versioned
-          packages is extremely useful for code sharing. However, making changes
-          across many repositories is <em>messy</em> and difficult to track, and
-          testing across repositories gets complicated really fast.
+          大型的代码库 拆分为 独立的版本包 对 代码共享非常有用,然而,要对这么
+          多的存储库进行更改是<em>如此凌乱</em>且难以追踪，还有还有
+          跨存储库测试 也变得非常复杂。
         </p>
 
         <p>
-          To solve these (and many other) problems, some projects will organize
-          their codebases into multi-package repositories. Projects like Babel,
-          React, Angular, Ember, Meteor, Jest, and many others develop all of
-          their packages within a single repository.
+          为了解决这样 (那样) 的问题, 一些项目组会将他们的基础代码库分组成多个包库. 像 Babel,
+          React, Angular, Ember, Meteor, Jest 和 其他项目组开发他们的包都是在一个repo库.
         </p>
 
         <p class="text__important">
-          Lerna is a tool that optimizes the workflow around managing
-          multi-package repositories with git and npm.
+          Lerna 搭配 git 与 npm 优化了管理多个包库的工作流程. 
         </p>
       </section>
 
@@ -52,32 +48,32 @@
 
       <section class="content__section" id="getting-started">
         <h2>
-          <a href="#getting-started">Getting Started</a>
+          <a href="#getting-started">入门</a>
         </h2>
 
         <p>
-          Let's start by installing Lerna globally with
-          <a href="https://www.npmjs.com">npm</a>:
+          让我们用
+          <a href="https://www.npmjs.com">npm</a> 全局下载开始:
         </p>
 
-        <p>Lerna 2.x is the recommended version to start with.</p>
+        <p>Lerna 2.x是推荐的版本.</p>
 
         <pre class="pre--command pre--centered"><code>npm install --global lerna</code></pre>
 
         <p>
-          Next we'll create a new git repository:
+            接下来我们将创建一个新的git存储库:
         </p>
 
         <pre class="pre--command pre--centered"><code>git init lerna-repo &amp;&amp; cd lerna-repo</code></pre>
 
         <p>
-          And now let's turn it into a Lerna repo:
+            现在让我们把它变成一个Lerna项目:
         </p>
 
         <pre class="pre--command pre--centered"><code>lerna init</code></pre>
 
         <p>
-          Your repository should now look like this:
+            您的存储库现在应该如下所示:
         </p>
 
         <pre class="pre--files"><code>lerna-repo/
@@ -90,13 +86,13 @@
 
       <section class="content__section" id="commands">
         <h2>
-          <a href="#commands">Commands</a>
+          <a href="#commands">命令</a>
         </h2>
 
         <p>
-          Here is a brief introduction for each command.
-          Please visit the <a href="https://github.com/lerna/lerna#readme">README</a>
-          for more detailed informations.
+            以下是每个命令的简要介绍。
+          请浏览 <a href="https://github.com/lerna/lerna#readme">README</a>
+          获取更多信息.
         </p>
 
         <section class="command" id="command-init">
@@ -105,15 +101,13 @@
           </a></h3>
 
           <p>
-            Create a new lerna repo or upgrade an existing repo to the current
-            version of Lerna.
+              创建一个新的lerna repo 或 将现有的repo升级到当前版本的Lerna。
           </p>
 
           <h4>Options</h4>
 
           <p>
-            <code>--independent</code>/<code>-i</code> – Use independent
-            versioning mode.
+            <code>--independent</code>/<code>-i</code> – 使用独立版本控制模式.
           </p>
         </section>
 
@@ -123,14 +117,11 @@
           </a></h3>
 
           <p>
-            Bootstrap the packages in the current Lerna repo. Installing all their
-            dependencies and linking any cross-dependencies.
+            在当前的Lerna仓库中引导包。安装所有依赖项并链接任何跨库依赖项
           </p>
           <p>
             <strong>
-              This command is crucial, as it allows you to use your package
-              names in <code>require()</code> as if the packages were already existing
-              and available in your <code>node_modules</code> folder.
+                此命令至关重要，因为它允许您 <code>require()</code>一些包名称来使用,就好像包已经存在并在您的 <code>node_modules</code> 文件夹.
             </strong>
           </p>
         </section>
@@ -140,7 +131,7 @@
             <code>lerna import &lt;pathToRepo&gt;</code>
           </a></h3>
           <p>
-            Import the package in the local path &lt;pathToRepo&gt; into packages/&lt;directory-name&gt; with commit history. 
+            导入 &lt;pathToRepo&gt; 这个本地路径的提交记录到packages/&lt;directory-name&gt;. 
           </p>
         </section>
 
@@ -150,26 +141,23 @@
           </a></h3>
 
           <p>
-            Create a new release of the packages that have been updated. Prompts
-            for a new version and updates all the packages on git and npm.
+              创建软件包的新版本用以更新. 提示新版本并更新 git和npm 上的所有软件包。
           </p>
 
-          <h4>Options</h4>
+          <h4>选项</h4>
 
           <p>
-            <code>--npm-tag [tagname]</code> — Publish to npm with the given
-            npm dist-tag (Defaults to latest).
+            <code>--npm-tag [tagname]</code> — 发布 tagname版本 到npm (默认是最新的).
           </p>
           <p>
-            <code>--canary</code>/<code>-c</code> – Create a canary release.
+            <code>--canary</code>/<code>-c</code> – 创建 canary 版本.
           </p>
           <p>
-            <code>--skip-git</code> – Don't run any git commands.
+            <code>--skip-git</code> – 不要运行任何git命令
           </p>
           <p>
-            <code>--force-publish [packages]</code> — Force publish for the
-            specified packages (comma-separated) or all packages using
-            <code>*</code> (skips the git diff check for changed packages).
+            <code>--force-publish [packages]</code> — 强制发布指定的包（逗号分隔）或所有包使用
+            <code>*</code> (跳过git diff检查更改的包).
           </p>
         </section>
 
@@ -178,7 +166,7 @@
             <code>lerna changed</code>
           </a></h3>
           <p>
-            Check which packages have changed since the last release.
+              检查自上次发布以来哪些软件包已更改.
           </p>
         </section>
 
@@ -188,7 +176,7 @@
           </a></h3>
 
           <p>
-            Diff all packages or a single package since the last release.
+              自上次发布以来，所有包或单个包的变化.
           </p>
         </section>
 
@@ -198,8 +186,8 @@
           </a></h3>
 
           <p>
-            Run an <a href="https://docs.npmjs.com/misc/scripts">npm script</a>
-            in each package that contains that script.
+            运行一个<a href="https://docs.npmjs.com/misc/scripts">npm script</a>
+            在每个包含这个脚本的包.
           </p>
         </section>
 
@@ -209,7 +197,7 @@
           </a></h3>
 
           <p>
-            List all of the public packages in the current Lerna repo.
+              列出当前Lerna项目中的所有公共包.
           </p>
         </section>
 
@@ -217,7 +205,7 @@
 
       <section class="content__section" id="users">
         <h2>
-          <a href="#users">Who's using Lerna?</a>
+          <a href="#users">谁在用 lerna ?</a>
         </h2>
 
           <ul>
